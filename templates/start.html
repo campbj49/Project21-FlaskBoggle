@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div id="highscore"></div>
+<div id="games-played"></div>
+<div id ="timer"></div>
+<div>Score:</div>
+<div id="score">0</div>
+<table>
+    {%for line in board%}
+    <tr>
+        {%for letter in line%}
+            <td class="letter">{{letter}}</td>
+        {%endfor%}
+    </tr>
+    {%endfor%}
+</table>
+<form>
+    <label>Enter Guess:</label>
+    <input type="text" id="guess">
+    <button>Enter</button>
+</form>
+<div id = "response"></div>
+{% endblock%}
